@@ -1,0 +1,26 @@
+name: Alpine Package Builder
+description: 'Builds an Alpine Linux package with the specified version'
+
+author: Adam Jensen <acjensen@gmail.com>
+
+secrets:
+  - GITHUB_TOKEN
+
+inputs:
+  package_path:
+    description: Path to the package to build (e.g., main/nginx)
+    required: true
+  package_version_path:
+    description: Path to file containing the package's current version number, relative to GITHUB_WORKSPACE
+    required: true
+  release_version_path:
+    description: Path to file containing the most recent release version number for the package, relative to GITHUB_WORKSPACE
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'git-commit'
+  color: blue
