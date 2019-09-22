@@ -14,7 +14,8 @@ git remote add upstream https://github.com/alpinelinux/aports.git
 git fetch upstream && git reset --hard upstream/master
 
 # Update the package version
-sed -i "s/pkgver=.*/pkgver=$INPUT_RELEASE_VERSION/g" APKBUILD
+sed -i "s/pkgver=.*/pkgver=0.1234.0/g" APKBUILD
 
 # Build the package
-abuild -F checksum && abuild -F -r
+#abuild -F checksum && abuild -F -r
+touch foo
