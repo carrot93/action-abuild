@@ -8,13 +8,10 @@ secrets:
 
 inputs:
   package_path:
-    description: Path to the package to build (e.g., main/nginx)
+    description: 'Path to the package to build (e.g., main/nginx)'
     required: true
-  package_version_path:
-    description: Path to file containing the package's current version number, relative to GITHUB_WORKSPACE
-    required: true
-  release_version_path:
-    description: Path to file containing the most recent release version number for the package, relative to GITHUB_WORKSPACE
+  release_version:
+    description: 'The version number to use when building the package'
     required: true
 
 runs:
