@@ -4,7 +4,7 @@ GitHub Action that builds Alpine Linux packages
 
 ## Usage
 
-See action.yml For comprehensive list of options.
+See [action.yml](./action.yml) for comprehensive list of options.
 
 ```yaml
 name: "Build Alpine package"
