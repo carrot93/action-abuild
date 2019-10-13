@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-LABEL "com.github.actions.name"="abuilder"
+LABEL "com.github.actions.name"="action-abuild"
 LABEL "com.github.actions.description"=""
 LABEL "com.github.actions.icon"="mic"
 LABEL "com.github.actions.color"="purple"
