@@ -16,5 +16,8 @@ git fetch upstream && git reset --hard upstream/master
 # Update the package version
 sed -i "s/pkgver=.*/pkgver=$INPUT_RELEASE_VERSION/g" APKBUILD
 
+# Reset pkgrel for the new version
+sed -i "s/pkgrel=.*/pkgrel=0/g" APKBUILD
+
 # Build the package
 abuild -F checksum && abuild -F -r
