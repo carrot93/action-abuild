@@ -2,6 +2,8 @@
 
 set -eu
 
+export GIT_CEILING_DIRECTORIES="/github/workspace"
+
 # Generate a temporary key for abuild
 mkdir "$GITHUB_WORKSPACE"/.abuild
 echo "$GITHUB_WORKSPACE/key" | abuild-keygen
