@@ -8,7 +8,7 @@ export GIT_CEILING_DIRECTORIES="/github/workspace"
 mkdir "$GITHUB_WORKSPACE"/.abuild
 echo "$GITHUB_WORKSPACE/key" | abuild-keygen
 echo PACKAGER_PRIVKEY="$GITHUB_WORKSPACE/key" > "$HOME"/.abuild/abuild.conf
-
+mkdir "$GITHUB_WORKSPACE/$INPUT_PACKAGE_PATH"
 cd "$GITHUB_WORKSPACE/$INPUT_PACKAGE_PATH"
 
 # Update the package version
